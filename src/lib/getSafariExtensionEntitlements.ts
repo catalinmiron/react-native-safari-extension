@@ -11,6 +11,11 @@ export function getSafariExtensionEntitlements(
     ],
   };
 
+  const appattestKey = 'com.apple.developer.devicecheck.appattest-environment';
+
+  if (iosConfig?.entitlements?.[appattestKey]) {
+    entitlements[appattestKey] = iosConfig.entitlements[appattestKey];
+  }
   iosConfig?.associatedDomains &&
     (entitlements["com.apple.developer.associated-domains"] =
       iosConfig.associatedDomains);
