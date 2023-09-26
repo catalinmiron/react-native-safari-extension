@@ -12,6 +12,11 @@ export function getSafariExtensionEntitlements(
   };
 
   const appattestKey = 'com.apple.developer.devicecheck.appattest-environment';
+  const appgroupSecurity = 'com.apple.security.application-groups';
+
+  if (iosConfig?.entitlements?.[appgroupSecurity]) {
+    entitlements[appgroupSecurity] = iosConfig.entitlements[appgroupSecurity];
+  }
 
   if (iosConfig?.entitlements?.[appattestKey]) {
     entitlements[appattestKey] = iosConfig.entitlements[appattestKey];
