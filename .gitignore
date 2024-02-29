@@ -3,3 +3,5 @@ builds/
 *.tgz
 .yarn/cache
 .DS_Store
+*.cjs
+*.mjs
