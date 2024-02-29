@@ -2,3 +2,4 @@ node_modules/
 builds/
 *.tgz
 .yarn/cache
+.DS_Store
