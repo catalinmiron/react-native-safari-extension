@@ -8,7 +8,7 @@ function getSafariExtensionEntitlements(iosConfig) {
         "com.apple.developer.parent-application-identifiers": [
             `$(AppIdentifierPrefix)${appBundleIdentifier}`,
         ],
-        'com.apple.developer.applesignin': true,
+        'com.apple.developer.applesignin': ['Default']
     };
     const appattestKey = 'com.apple.developer.devicecheck.appattest-environment';
     const appgroupSecurity = 'com.apple.security.application-groups';
